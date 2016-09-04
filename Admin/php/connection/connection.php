@@ -15,12 +15,14 @@ function dbConnect(){
 	$dbName = 'root';
 	$clusterName = 'default';
 	$database = 'dataBaseConnect';
+	echo "Trying to connect";
 	try {
-    	$db = new OrientDB('localhost', 2424);
+    	$db = new OrientDB('localhost', 2425);
 	}
 	catch (Exception $e) {
     	die('Failed to connect: ' . $e->getMessage());
 	}
+	echo "Trying to connect 2";
 	try {
     	$connect = $db->connect('root', $rootPassword);
     
@@ -32,9 +34,8 @@ function dbConnect(){
 	return $db;
 }
 
-/*$db->DBOpen('prueba', 'root', 'root');
+$db->DBOpen('prueba', 'root', 'root');
 
 $data = $db->select('select First_name from persona ');
 echo $data[0];
-*/
 

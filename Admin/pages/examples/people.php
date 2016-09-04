@@ -369,6 +369,7 @@
           include ('../../php/connection/connection.php');
           $db = dbConnect();
           $data = $db->query('select  firstName from Person');
+          echo $data[0];
         ?>
      
       </div>
