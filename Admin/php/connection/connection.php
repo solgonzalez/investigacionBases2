@@ -11,18 +11,16 @@
 require_once ('../../../OrientDB/OrientDB.php');
 
 function dbConnect(){
-	$rootPassword = 'root';
-	$dbName = 'root';
+	$rootPassword = 'pass12sol';
+	$dbName = 'prueba';
 	$clusterName = 'default';
-	$database = 'dataBaseConnect';
-	echo "Trying to connect";
+	$database = 'prueba';
 	try {
-    	$db = new OrientDB('localhost', 2425);
+    	$db = new OrientDB('localhost', 2480);
 	}
 	catch (Exception $e) {
     	die('Failed to connect: ' . $e->getMessage());
 	}
-	echo "Trying to connect 2";
 	try {
     	$connect = $db->connect('root', $rootPassword);
     
@@ -30,12 +28,13 @@ function dbConnect(){
 	catch (OrientDBException $e) {
     	die('Failed to connect():2 ' . $e->getMessage());
 	}
-	$db->DBOpen('dataBaseConnect', 'root', 'root');
+	$db->DBOpen('prueba', 'root', 'root');
 	return $db;
 }
 
-$db->DBOpen('prueba', 'root', 'root');
+/*$db->DBOpen('prueba', 'root', 'root');
 
 $data = $db->select('select First_name from persona ');
 echo $data[0];
+*/
 
