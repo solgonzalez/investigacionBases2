@@ -363,17 +363,33 @@
     <!-- Main content -->
     <section class="content">
 
-      <u1> hola</u1>
-      <div class="row">
-        <?php
-          include ('../../php/connection/connection.php');
-          $db = dbConnect();
-          $data = $db->query('select  firstName from Person');
-          echo $data[0];
-        ?>
-     
-      </div>
-      <!-- /.row -->
+      <!-- Widget: user widget style 1 -->
+      <div class="col-md-3">
+          <div class="box box-widget widget-user">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-aqua-active">
+              <h3 class="widget-user-username">User you may know</h3>
+              <h5 class="widget-user-desc">Profession</h5>
+            </div>
+            <div class="widget-user-image">
+              <img class="img-circle" src="../../dist/img/user1-128x128.jpg" alt="User Avatar">
+            </div>
+            <div class="box-footer">
+              <div class="row">
+                <!-- /.col -->
+                <div class="col-sm-4 border-right">
+                  <div class="description-block">
+                    <h5 class="description-header">#</h5>
+                    <span class="description-text">FOLLOWERS</span>
+                  </div>
+                  <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+          </div>
+        </div>
 
     </section>
     <!-- /.content -->
